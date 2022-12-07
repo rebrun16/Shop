@@ -31,7 +31,7 @@ const Footer = () => {
           </span>
         </div>
         <div className="item">
-          <h1>Contact</h1>
+          <h1>Contacts</h1>
           <span>
             Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit

@@ -21,10 +21,13 @@ const Navbar = () => {
             <img src="/img/en.png" alt="" />
             <KeyboardArrowDownIcon />
           </div>
-          <div className="item">
-            <span>USD</span>
+          <select className="item">
+            <select>USD</select>
+            <option>USD</option>
+            <option>EUR</option>
+            <option>UAH</option>
             <KeyboardArrowDownIcon />
-          </div>
+          </select>
           <div className="item">
             <Link className ="link" to="/products/1">Women</Link>
           </div>
@@ -46,10 +49,10 @@ const Navbar = () => {
             <Link className ="link" to="/">About</Link>
           </div>
           <div className="item">
-            <Link className ="link" to="/">Contact</Link>
+            <Link className ="link" to="/contact">Contact</Link>
           </div>
           <div className="item">
-            <Link className ="link" to="/">Stores</Link>
+            <Link className ="link" to="/product/1">Stores</Link>
           </div>
           <div className="icons">
             <SearchIcon/>

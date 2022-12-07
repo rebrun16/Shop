@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home";
 import Product from "./pages/Product/Product";
 import Products from "./pages/Products/Products";
 import "./app.scss";
+import Contact from "./components/Contact/Contact";
 
 const Layout = () => {
   return (
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/product/:id",
         element: <Product />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },

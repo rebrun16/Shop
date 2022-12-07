@@ -28,6 +28,52 @@
     .icons{
       display: flex;
       gap: 10px;
+      color: white;
     }
+    .icon {
+      color: white
+    }
+  }
+}
+.contacts{
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+
+  .wrapper{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .tels {
+    display: flex;
+    flex-direction: column;
+  }
+  .tel{
+    display: flex;
+    margin: 5px;
+  }
+  a{
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+  }
+  h1{
+    font-size: 36px;
+    
+  }
+  .places {
+    display: flex;
+    flex-direction: column;
+  }
+  .place{
+    display: flex;
+    margin: 5px;
+  }
+  p{
+    font-size: 16px;
   }
 }

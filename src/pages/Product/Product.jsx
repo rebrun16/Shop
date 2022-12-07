@@ -12,7 +12,8 @@ const Product = () => {
   const[quantity, setQuantity] = useState(1);
 
   const images = [
-    ""
+   "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1600",
+   "https://images.pexels.com/photos/783243/pexels-photo-783243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   ];
 
   return (
@@ -28,7 +29,7 @@ const Product = () => {
       </div>
       <div className='right'>
         <h1>Title</h1>
-        <span className="price">$199</span>
+        <span className="price">$39</span>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quaerat cumque, labore possimus facere eaque exercitationem repellat sed obcaecati ea eos. Doloremque quia aperiam nisi amet fugiat odio nemo a?
         </p>
