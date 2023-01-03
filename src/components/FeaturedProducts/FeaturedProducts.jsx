@@ -1,27 +1,34 @@
-import React from 'react'
-import Card from '../Card/Card';
+import React from "react";
+import Card from "../Card/Card";
 import "./FeaturedProducts.scss";
+import useFetch from "../../hooks/useFetch";
 
-const FeaturedProducts = ({type}) => {
-  const data = [
-    "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "https://images.pexels.com/photos/783243/pexels-photo-783243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-   ];
+const FeaturedProducts = ({ type }) => {
+  const { data, loading, error } = useFetch(
+    `/products?populate=*&[filters][type][$eq]=${type}`
+  );
+
   return (
-    <div className='featuredProducts'>
+    <div className="featuredProducts">
       <div className="top">
-        <h1>{type} products </h1>
+        <h1>{type} products</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis odit placeat similique eveniet ea corporis inventore, facere repellat quod labore rerum fuga voluptates reiciendis repudiandae veniam! Officia nesciunt excepturi saepe.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+          suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
+          lacus vel facilisis labore et dolore magna aliqua. Quis ipsum
+          suspendisse ultrices gravida. Risus commodo viverra maecenas.
         </p>
       </div>
       <div className="bottom">
-        {data.map(item => (
-          <Card item={item} key={item.id}/>
-        ))}
+        {error
+          ? "Something went wrong!"
+          : loading
+          ? "loading"
+          : data?.map((item) => <Card item={item} key={item.id} />)}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FeaturedProducts
+export default FeaturedProducts;
