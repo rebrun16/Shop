@@ -1,6 +1,8 @@
 .navbar{
   height: 80px;
-
+  background-color: rgba(63, 49, 255, 0.63);
+  padding-top:20px;
+  
   .wrapper {
     padding:10px 30px;
     display: flex;
@@ -10,7 +12,13 @@
     .item{
       display: flex;
       align-items: center;
-      font-size: 18px;
+      font-size: 22px;
+
+      :hover{
+        color: white;
+        text-decoration: underline;
+        transition: 0.3s ease-in;
+      }
     }
 
     .left{
@@ -30,7 +38,7 @@
       .icons{
         display: flex;
         gap: 15px;
-        color: #777;
+        margin-left: 20px;
         cursor: pointer;
 
         .cartIcon{
@@ -42,6 +50,24 @@
             height: 20px;
             border-radius: 50%;
             background-color: #2879fe;
+            color: white;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        .cartFavourite {
+          position:relative;
+
+          span{
+            font-size: 12px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: red;
             color: white;
             position: absolute;
             right: -10px;

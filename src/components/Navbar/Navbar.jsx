@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [open,setOpen] = useState(false)
+  const [like,setLike] = useState(false)
   const products = useSelector((state) => state.cart.products);
 
   return (
@@ -57,11 +58,13 @@ const Navbar = () => {
           <div className="icons">
             <SearchIcon/>
             <PersonOutlineOutlinedIcon/>
-            <FavoriteBorderOutlinedIcon/>
+            <div className="cartFavourite" onClick={()=>setLike(!like)}>
+              <FavoriteBorderOutlinedIcon/>
+              <span>{products.length}</span>
+            </div>
             <div className="cartIcon" onClick={()=>setOpen(!open)}>
               <ShoppingCartOutlinedIcon/>
               <span>{products.length}</span>
-              <span>{0}</span>
             </div>
           </div>
         </div>
